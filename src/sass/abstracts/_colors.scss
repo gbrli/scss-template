@@ -1,0 +1,28 @@
+$height: 100px;
+$width: 100px;
+$clr-primary: limegreen;
+$clr-secondary: hotpink;
+$clr-tertiary: cyan;
+
+// easy light/dark mode or color schemes
+$bg-dark: #1f1f1f;
+$bg-light: #ededed;
+
+$txt-light: #ededed;
+$txt-dark: #1f1f1f;
+
+$dark-scheme: $bg-dark, $txt-light;
+$light-scheme: $bg-light, $txt-dark;
+
+$colors: (
+  neutral: (
+    light: white,
+    normal: gray,
+    dark: black,
+  ),
+  primary: (
+    light: lightblue,
+    normal: rgb(46, 150, 184),
+    dark: rgb(16, 74, 93),
+  ),
+);
