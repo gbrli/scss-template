@@ -16,13 +16,13 @@ $light-scheme: $bg-light, $txt-dark;
 
 $colors: (
   neutral: (
-    light: white,
-    normal: gray,
-    dark: black,
+    100: white,
+    400: gray,
+    900: black,
   ),
   primary: (
-    light: lightblue,
-    normal: rgb(46, 150, 184),
-    dark: rgb(16, 74, 93),
+    100: rgb(167, 229, 167),
+    400: limegreen,
+    900: rgb(29, 134, 29),
   ),
 );

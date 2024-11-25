@@ -4,7 +4,7 @@
 
 // will import everything forwarded inside the base/_index.scss file
 @use './base' as *;
-// @use './components' as *;
+@use './components' as *;
 // @use './layout' as *;
 @use './utilities' as *;
 // @use './vendor' as *;

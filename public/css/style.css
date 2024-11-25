@@ -10,52 +10,84 @@
   font: inherit;
 }
 
-.clr-neutral-light {
+.button {
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 700;
   color: white;
+  background-color: limegreen;
+  padding: 1em 1.5em;
+  justify-self: center;
 }
-
-.bg-neutral-light {
+.button:hover, .button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.button[data-type=inverted] {
+  color: limegreen;
   background-color: white;
 }
 
-.clr-neutral-normal {
+.clr-neutral-100 {
+  color: white;
+}
+
+.bg-neutral-100 {
+  background-color: white;
+}
+
+.clr-neutral-400 {
   color: gray;
 }
 
-.bg-neutral-normal {
+.bg-neutral-400 {
   background-color: gray;
 }
 
-.clr-neutral-dark {
+.clr-neutral-900 {
   color: black;
 }
 
-.bg-neutral-dark {
+.bg-neutral-900 {
   background-color: black;
 }
 
-.clr-primary-light {
-  color: lightblue;
+.clr-primary-100 {
+  color: rgb(167, 229, 167);
 }
 
-.bg-primary-light {
-  background-color: lightblue;
+.bg-primary-100 {
+  background-color: rgb(167, 229, 167);
 }
 
-.clr-primary-normal {
-  color: rgb(46, 150, 184);
+.clr-primary-400 {
+  color: limegreen;
 }
 
-.bg-primary-normal {
-  background-color: rgb(46, 150, 184);
+.bg-primary-400 {
+  background-color: limegreen;
 }
 
-.clr-primary-dark {
-  color: rgb(16, 74, 93);
+.clr-primary-900 {
+  color: rgb(29, 134, 29);
 }
 
-.bg-primary-dark {
-  background-color: rgb(16, 74, 93);
+.bg-primary-900 {
+  background-color: rgb(29, 134, 29);
+}
+
+.container {
+  width: min(100% - 2rem, 60rem);
+  margin-inline: auto;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1rem);
+}
+
+.flow[data-spacing=small] {
+  --flow-spacer: .25rem;
 }
 
 .fs-900 {
@@ -76,6 +108,14 @@
 
 .fs-400 {
   font-size: 1.125rem;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-bold {
+  font-weight: 700;
 }
 
 .margin-8 {
