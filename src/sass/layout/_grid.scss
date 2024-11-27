@@ -1,0 +1,67 @@
+
+@use '../abstracts' as *;
+
+.even-columns {
+    display: grid;
+    gap: 1rem;
+  
+    @include mq(medium) {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+    }
+}
+
+.grid-auto-fit {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+
+//== Grid layout col system
+
+.col,
+[class*="col-"] {
+  padding: 1rem;
+}
+
+$total-columns: 12;
+
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat($total-columns, minmax(0, 1fr));
+  border: 1px solid white;
+}
+
+[class*="col-"] {
+  grid-column: span $total-columns;
+}
+
+@for $column-count from 1 through $total-columns {
+  // always a column
+  .col-#{$column-count} {
+    grid-column: span $column-count;
+  }
+
+  // small screens and up
+  @media (min-width: 20em) {
+    .col-sm-#{$column-count} {
+      grid-column: span $column-count;
+    }
+  }
+
+  // medium screens and up
+  @media (min-width: 40em) {
+    .col-med-#{$column-count} {
+      grid-column: span $column-count;
+    }
+  }
+
+  // large screens and up
+  @media (min-width: 60em) {
+    .col-lg-#{$column-count} {
+      grid-column: span $column-count;
+    }
+  }
+}

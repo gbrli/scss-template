@@ -21,3 +21,17 @@
       background-color: clr(neutral, 100);
     }
 }
+
+
+.button[data-type="accent"] {
+  background-color: clr(accent, 400);
+  color: clr(neutral, 900);
+}
+
+.button[data-type="outline"] {
+  --outline-size: 5px;
+  background: transparent;
+  outline: var(--outline-size) solid clr(neutral, 100);
+  outline-offset: calc(var(--outline-size) * -1);
+  color: clr(neutral, 100);
+}
